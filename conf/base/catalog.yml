@@ -141,3 +141,10 @@ submission:
   filepath: data/07_model_output/Submission.csv
   save_args:
     index: False
+
+
+baseline_model:
+  type: pickle.PickleDataSet
+  filepath: data/06_models/baseline_model.pkl
+  backend: joblib
+

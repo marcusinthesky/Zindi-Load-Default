@@ -1,0 +1,4 @@
+artifact_location: file:///home/marcussky/Git/zindi_loan_default/mlruns/1/mlruns/0
+experiment_id: '0'
+lifecycle_stage: active
+name: Default
