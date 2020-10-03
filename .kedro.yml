@@ -1,0 +1,6 @@
+context_path: zindi_load_default.run.ProjectContext
+project_name: "zindi_load_default"
+project_version: "0.16.5"
+package_name: "zindi_load_default"
+hooks:
+  - zindi_load_default.hooks.project_hooks

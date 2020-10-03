@@ -1,0 +1,7 @@
+FROM continuumio/miniconda3:4.8.2
+WORKDIR /app
+COPY requirements.txt .
+RUN apt-get update --fix-missing && apt install -y libxt6 libdbus-glib-1-dev libgtk-3-0
+RUN pip install -r requirements.txt
+COPY . .
+RUN kedro install
