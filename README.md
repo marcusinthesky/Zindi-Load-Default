@@ -1,4 +1,6 @@
 # zindi_load_default
+## Environment
+This repository makes use of `Git` version control. `Precommit` hooks have been used to provide checks to the developer on the heath and conformity of their code. Here, we make use of `Black` for automatic formatting, `flake8` for linting and `jupytext` to automatically convert our notebooks to `py:percent` files for better version control. Our environment has been setup using `Anaconda`. You can find an explicit environment file in the `src` directory. We have provideded a `Dockerfile` and compose to aid in portabilit of our environment. This project makes use of `kedro` for data versioning, project templating, data pipelining, automatic documentation, data catalogingm packaging and context management. Please refer to `conf/base/catalog` for speific details on how our data and models were extracted, serialized and versioning. The majority of our analysis has relied on consumer hardware with 16GB of Micron MT53E1G32D4NQ-046 memory clocked at 4267MHz and a Quadcore Intel R Core TM i7-1065G7 processor clocked at 1.30GHz, running Ubuntu 20.04 using linux kernel 5.4.0-48-generic. At the release of our work, we are unaware of any known issues in the software and hardware used by our analysis which may affect the reliability of our results.
 
 ## Overview
 

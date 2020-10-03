@@ -46,3 +46,98 @@
 example_iris_data:
   type: pandas.CSVDataSet
   filepath: data/01_raw/iris.csv
+
+traindemographics:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/traindemographics.csv
+  load_args:
+    parse_dates:
+      - birthdate
+    dtype:
+      customerid: category
+      bank_account_type: category
+      bank_name_clients: category
+      bank_branch_clients: category
+      employment_status_clients: category
+      level_of_education_clients: category
+
+testdemographics:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/testdemographics.csv
+  load_args:
+    parse_dates:
+      - birthdate
+    dtype:
+      customerid: category
+      bank_account_type: category
+      bank_name_clients: category
+      bank_branch_clients: category
+      employment_status_clients: category
+      level_of_education_clients: category
+
+trainperf:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/trainperf.csv
+  load_args:
+    parse_dates:
+      - approveddate
+      - creationdate
+    dtype:
+      customerid: category
+      referredby: category
+      good_bad_flag: category
+      systemloanid: category
+      loanamount: float
+
+testperf:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/testperf.csv
+  load_args:
+    parse_dates:
+      - approveddate
+      - creationdate
+    dtype:
+      customerid: category
+      referredby: category
+      good_bad_flag: category
+      systemloanid: category
+      loanamount: float
+
+trainprevloans:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/trainprevloans.csv
+  load_args:
+    parse_dates:
+      - approveddate
+      - creationdate
+      - closeddate
+      - firstduedate
+      - firstrepaiddate
+    dtype:
+      customerid: category
+      referredby: category
+
+testprevloans:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/testprevloans.csv
+  load_args:
+    parse_dates:
+      - approveddate
+      - creationdate
+      - closeddate
+      - firstduedate
+      - firstrepaiddate
+    dtype:
+      customerid: category
+      referredby: category
+
+SampleSubmission:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/SampleSubmission.csv
+
+submission:
+  type: pandas.CSVDataSet
+  versioned: True
+  filepath: data/07_model_output/Submission.csv
+  save_args:
+    index: False
